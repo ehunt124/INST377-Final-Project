@@ -1,0 +1,49 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foreclosures in PG County Ethan Hunt INST377</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header"><h1>Foreclosures in PG County</h1></header>
+            <div class="container">
+                <div class="left_section">
+                    <h2>Map</h2>
+                    <div id="map" class="box"></div>
+                </div>
+                <div class="right_section">
+                    <div class="empty-box">
+                        <form action="https://data.princegeorgescountymd.gov/resource/mnie-hrv7.json" class="box main_form">
+                            <h2>Filter</h2>
+                            <button type="button" id="data_load">Load Data</button>
+                            <button type="button" id="data_clear">Clear Data</button>
+                            <button type="button" id="data_filter">Filter Data</button>
+                            <h3>Date</h3>
+                            from
+                            <input type="date" id="start_date" min="2009-01-01" max="2024-01-01">
+                            to
+                            <input type="date" id="end_date" min="2009-01-01" max="2024-01-01"> 
+                            <div>
+                                <label for="resto"><h3>City</h3></label>
+                                <input type="text" id="resto" name="resto"/>
+                            </div>
+                        </form>
+                        <footer class = "empty-box">Number of Foreclosures: 0</footer>
+                    </div>
+                </div>
+            </div>
+            <footer class = "footer">
+                Ethan Hunt's Final Project for INST377&emsp;
+                <a href="https://github.com/ehunt124">Github Account</a>&emsp;
+                <a href="https://github.com/ehunt124/INST377-Final-Project">Code Repository</a>&emsp;
+                <a href="">Video Presentation</a>
+            </footer>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
