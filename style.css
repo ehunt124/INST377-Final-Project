@@ -181,6 +181,10 @@
         width: 360px;
       }
 
+      .left_section {
+        padding: 0;
+      }
+
       .right_section {
         padding: 0;
       }
