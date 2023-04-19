@@ -176,6 +176,14 @@
         justify-content: center;
         align-items: center;
       }
+      
+      .main_form {
+        width: 360px;
+      }
+
+      .right_section {
+        padding: 0;
+      }
 
       #map {
         height: 400px;
