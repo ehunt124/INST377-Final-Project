@@ -38,7 +38,7 @@
   }
 
   #map {
-    height: 360px;
+    height: 400px;
     width: 1000px;
     margin-bottom: 1rem;
   }
@@ -175,6 +175,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      }
+
+      #map {
+        height: 400px;
+        width: 360px;
       }
   }
 
