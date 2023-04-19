@@ -17,24 +17,22 @@
                     <div id="map" class="box"></div>
                 </div>
                 <div class="right_section">
-                    <div class="empty-box">
-                        <form action="https://data.princegeorgescountymd.gov/resource/mnie-hrv7.json" class="box main_form">
-                            <h2>Filter</h2>
-                            <button type="button" id="data_load">Load Data</button>
-                            <button type="button" id="data_clear">Clear Data</button>
-                            <button type="button" id="data_filter">Filter Data</button>
-                            <h3>Date</h3>
-                            from
-                            <input type="date" id="start_date" min="2009-01-01" max="2024-01-01">
-                            to
-                            <input type="date" id="end_date" min="2009-01-01" max="2024-01-01"> 
-                            <div>
-                                <label for="resto"><h3>City</h3></label>
-                                <input type="text" id="resto" name="resto"/>
-                            </div>
-                        </form>
-                        <footer class = "empty-box">Number of Foreclosures: 0</footer>
-                    </div>
+                    <form action="https://data.princegeorgescountymd.gov/resource/mnie-hrv7.json" class="box main_form">
+                        <h2>Filter</h2>
+                        <button type="button" id="data_load">Load Data</button>
+                        <button type="button" id="data_clear">Clear Data</button>
+                        <button type="button" id="data_filter">Filter Data</button>
+                        <h3>Date</h3>
+                        from
+                        <input type="date" id="start_date" min="2009-01-01" max="2024-01-01">
+                        to
+                        <input type="date" id="end_date" min="2009-01-01" max="2024-01-01"> 
+                        <div>
+                            <label for="resto"><h3>City</h3></label>
+                            <input type="text" id="resto" name="resto"/>
+                        </div>
+                    </form>
+                    <footer class = "empty-box">Number of Foreclosures: 0</footer>
                 </div>
             </div>
             <footer class = "footer">
