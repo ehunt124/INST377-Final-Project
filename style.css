@@ -44,9 +44,7 @@
   }
 
   #data {
-    height: 100px;
-    width: 1000px;
-    margin-bottom: 1rem;
+    width: 950.4px;
   }
 
   .hidden {
@@ -68,7 +66,7 @@
   .container {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     flex: 1;
   }
   
@@ -190,37 +188,27 @@
         margin: 0;
         flex: 1;
       }
+
       .container {
         flex-direction: column-reverse;
-        justify-content: center;
         align-items: center;
       }
-      
-      .main_form {
-        width: 360px;
+
+      .about_section_text {
+        width: fit-content;
       }
 
       .left_section {
-        padding: 0;
-      }
-
-      .right_section {
-        padding: 0;
-        padding-top: 1rem;
-      }
-    
-      .about_section_text {
         width: 360px;
       }
 
       #data {
-        height: 400px;
-        width: 360px;
+        width: 275px;
       }
 
       #map {
         height: 400px;
-        width: 360px;
+        width: 320px;
       }
   }
 
