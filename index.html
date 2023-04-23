@@ -1,6 +1,6 @@
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTa-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Foreclosures in PG County Ethan Hunt INST377</title>
@@ -10,16 +10,19 @@
     </head>
     <body>
         <div class="wrapper">
-            <header class="header"><h1>Foreclosures in PG County</h1></header>
+            <header class="header"><h1>Foreclosures in PG County (2019-2023)</h1></header>
             <div class="container">
                 <div class="left_section">
                     <h2>Map</h2>
-                    <div id="map" class="box"></div>
+                    <div id="map"></div>
                     <h2>Data</h2>
-                    <div id="data" class="box">
+                    <div class="box">
                         <div class="lds-roller" id="load_animation">
                             <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
                         </div>
+                        <ol id="data">
+
+                        </ol>
                     </div>
                 </div>
                 <div class="right_section">
@@ -30,12 +33,12 @@
                         <button type="button" id="data_filter">Filter Data</button>
                         <h3>Date</h3>
                         from
-                        <input type="date" id="start_date" min="2009-01-01" max="2024-01-01">
+                        <input type="date" id="start_date" value="2019-01-01" min="2019-01-01" max="2024-01-01">
                         to
-                        <input type="date" id="end_date" min="2009-01-01" max="2024-01-01"> 
+                        <input type="date" id="end_date" value="2024-01-01" min="2019-01-01" max="2024-01-01"> 
                         <div>
                             <label for="resto"><h3>City</h3></label>
-                            <input type="text" id="resto" name="resto"/>
+                            <input type="text" id="city"/>
                         </div>
                     </form>
                     <footer class = "empty-box">Number of Foreclosures: 0</footer>
