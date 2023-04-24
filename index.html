@@ -37,17 +37,19 @@
                         to
                         <input type="date" id="end_date" value="2024-01-01" min="2019-01-01" max="2024-01-01"> 
                         <div>
-                            <label for="resto"><h3>City</h3></label>
-                            <input type="text" id="city"/>
-                        </div>
+                            <label for="city"><h3>City</h3></label>
+                            <input type="text" name="city" id="city"/>
+                        </div> 
                     </form>
-                    <footer class = "empty-box">Number of Foreclosures: 0</footer>
+                    <footer class = "empty-box" id="total">Number of Foreclosures: -</footer>
                 </div>
             </div>
             <footer class = "footer">
-                Ethan Hunt's Final Project for INST377&emsp;&emsp;&emsp;
-                <a href="index.html">Home</a>&emsp;
-                <a href="about.html">About</a>
+                <div>Ethan Hunt's Final Project for INST377</div>
+                <div>
+                    <a href="index.html">Home</a>&emsp;
+                    <a href="about.html">About</a>
+                </div>
             </footer>
         </div>
         <script src="./script.js"></script>
