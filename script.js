@@ -60,7 +60,7 @@ function markerPlace(list, map) {
 }
 
 async function getBorder() {
-  const border = await fetch("PGBoundary.geojson");
+  const border = await fetch("https://data.princegeorgescountymd.gov/resource/qytr-rie2.geojson");
   return await border.json();
 }
 
@@ -80,6 +80,7 @@ async function mainEvent() {
   const dataLoadButton = document.querySelector('#data_load');
   const dataClearButton = document.querySelector('#data_clear');
   const filterButton = document.querySelector('#data_filter');
+  const clearFilterButton = document.querySelector("#clear_filter");
   const startDate = document.querySelector("#start_date");
   const endDate = document.querySelector("#end_date");
   const city = document.querySelector("#city");
@@ -114,6 +115,7 @@ async function mainEvent() {
   dataClearButton.addEventListener('click', (event) => {
     console.log('Clearing browser data');
     localStorage.clear();
+    storedData = JSON.parse(localStorage.getItem('storedData'));
     filterButton.classList.add('hidden');
     console.log('Browser data cleared');
     injectHTML("", map);
@@ -122,9 +124,23 @@ async function mainEvent() {
   filterButton.addEventListener('click', (event) => {
     console.log('Filtering data');
     const areaList = filterList(storedData, startDate.value, endDate.value, city.value);
-    console.log('Data filtered');
-    injectHTML(areaList, map);
+    if (areaList.length > 2000) {
+      alert(`Filtered dataset is too large to display! ${areaList.length}/2000`);
+      console.log(`Filtered dataset too large${areaList.length}/2000`);
+    } else {
+      console.log('Data filtered');
+      injectHTML(areaList, map);
+    }
   });
+
+  clearFilterButton.addEventListener('click', (event) => {
+    console.log('Clearing filters');
+    document.getElementById("start_date").value = "";
+    document.getElementById("end_date").value = "";
+    document.getElementById("city").value = "";
+    console.log('Filters cleared');
+  });
+
 
   city.addEventListener("keypress", function(event) {
     console.log('Enter keypress triggered Filter data');

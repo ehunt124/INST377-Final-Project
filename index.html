@@ -16,7 +16,7 @@
                     <h2>Map</h2>
                     <div id="map"></div>
                     <h2>Data</h2>
-                    <div class="box">
+                    <div class="data">
                         <div class="lds-roller" id="load_animation">
                             <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
                         </div>
@@ -33,13 +33,14 @@
                         <button type="button" id="data_filter">Filter Data</button>
                         <h3>Date</h3>
                         from
-                        <input type="date" id="start_date" value="2019-01-01" min="2019-01-01" max="2024-01-01">
+                        <input type="date" id="start_date" min="2019-01-01" max="2024-01-01">
                         to
-                        <input type="date" id="end_date" value="2024-01-01" min="2019-01-01" max="2024-01-01"> 
+                        <input type="date" id="end_date" min="2019-01-01" max="2024-01-01"> 
                         <div>
                             <label for="city"><h3>City</h3></label>
                             <input type="text" name="city" id="city"/>
                         </div> 
+                        <button type="button" id="clear_filter">Clear Filters</button>
                     </form>
                     <footer class = "empty-box" id="total">Number of Foreclosures: -</footer>
                 </div>
