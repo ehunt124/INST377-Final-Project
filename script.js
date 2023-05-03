@@ -18,11 +18,10 @@ function injectHTML(list, map) {
 }
 
 function filterList(list, startDate, endDate, city) {
-  return_list = list.filter((item) => {
+  return list.filter((item) => {
     var date = new Date(item.submitteddate);
     return (date >= new Date(startDate) && date <= new Date(endDate)) && item.city.toLowerCase().includes(city.toLowerCase());
   });
-  return return_list;
 }
 
 function initMap() {
@@ -115,7 +114,7 @@ async function mainEvent() {
   dataClearButton.addEventListener('click', (event) => {
     console.log('Clearing browser data');
     localStorage.clear();
-    storedData = JSON.parse(localStorage.getItem('storedData'));
+    storedData = []
     filterButton.classList.add('hidden');
     console.log('Browser data cleared');
     injectHTML("", map);
