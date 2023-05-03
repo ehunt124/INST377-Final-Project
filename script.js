@@ -48,7 +48,7 @@ function markerPlace(list, map) {
     list.forEach((item) => {
       const coordinates = getCoords(item.location);
       coordinates.then((coords) => {
-        L.marker(coords).bindPopup(item.location.toUpperCase()).addTo(map);
+        L.marker(coords).bindPopup(`[${item.submitteddate.substring(0, item.submitteddate.length - 13)}] - ${item.location.toUpperCase()}`).addTo(map);
       });
     });
     getCoords(list[0].location).then((coords) => {
@@ -117,15 +117,15 @@ async function mainEvent() {
     storedData = []
     filterButton.classList.add('hidden');
     console.log('Browser data cleared');
-    injectHTML("", map);
+    injectHTML(storedData, map);
   });
 
   filterButton.addEventListener('click', (event) => {
     console.log('Filtering data');
     const areaList = filterList(storedData, startDate.value, endDate.value, city.value);
-    if (areaList.length > 2000) {
-      alert(`Filtered dataset is too large to display! ${areaList.length}/2000`);
-      console.log(`Filtered dataset too large${areaList.length}/2000`);
+    if (areaList.length > 2500) {
+      alert(`Filtered dataset is too large to display! ${areaList.length}/2500`);
+      console.log(`Filtered dataset too large${areaList.length}/2500`);
     } else {
       console.log('Data filtered');
       injectHTML(areaList, map);
