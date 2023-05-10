@@ -32,6 +32,10 @@
     margin: 0;
   }
 
+  video {
+    width: 800px;
+  }
+
   #map {
     height: 400px;
     margin-bottom: 1rem;
@@ -102,6 +106,7 @@
   .about_section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 1rem;
   }
@@ -198,6 +203,10 @@
       .left_section {
         width: 350px;
         flex-basis: auto;
+      }
+
+      video {
+        width: 350px;
       }
   }
 
